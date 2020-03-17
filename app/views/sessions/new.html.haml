@@ -1,0 +1,20 @@
+-# ----------------------------
+-# header
+-# ----------------------------
+= render 'layouts/header'
+
+.container
+  .row
+    .login
+      = form_with scope: :session, url: login_path, local: true do |f|
+        .form-group
+          = f.label :email, 'Email'
+          = f.text_field :email, class: 'form-control'
+        .form-group
+          = f.label :password, 'Password'
+          %br
+          = f.password_field :password, class: 'font-control'
+        .form-group
+          =f.submit 'Log in', class: 'btn btn-warning'
+          %button.btn.btn-primary
+            = link_to 'Sign up', users_path

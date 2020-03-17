@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
-  root to: "schools#index"
+  root to: "sessions#new"
   resources :schools
+
+  get '/login' => 'sessions#new'
+  post '/login'=> 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+
+  get '/users' => 'users#new'
+  post '/users'=> 'users#create'
+  delete '/users' => 'users#destroy'
 end
