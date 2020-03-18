@@ -8,8 +8,8 @@
     .wrapper
       = form_with model: @school, url: schools_path	, local: true do |f|
         .form-group
-          = f.label :scool_class, '授業名'
-          = f.text_field :scool_class, class: 'form-control'
+          = f.label :school_class, '授業名'
+          = f.text_field :school_class, class: 'form-control'
         .form-group
           = f.label :name, '教授名'
           = f.text_field :name, class: 'form-control'
