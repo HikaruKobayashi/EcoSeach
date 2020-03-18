@@ -1,7 +1,7 @@
 class SchoolsController < ApplicationController
   before_action :logged_in_user, only:[:edit, :update, :destroy]
 
-  def idnex
+  def index
     @school = School.all
   end
 
@@ -13,19 +13,22 @@ class SchoolsController < ApplicationController
     @school = School.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @school = School.new(school_params)
     @school.user_id = current_user.id
     @school.save!
-    redirect schools_path	
+    redirect_to schools_path	
   end
+
+  def update; end
+
+  def destroy; end
 
   private
 
   def school_params
-    params.require(:school).permit(:school_class, :name, :content, :test, :evaluation1)
+    params.require(:school).permit(:school_class, :name, :content, :test, :evaluation)
   end
 end
