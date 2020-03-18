@@ -5,11 +5,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def ceate
+  def create
     @user = User.create(user_params)
     if @user.save!
-      session[:user_id] = @user.user_id
-      redirect_to schools_path
+      session[:user_id] = @user.id
     else
       render ('/users/new')
     end

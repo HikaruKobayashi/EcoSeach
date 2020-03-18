@@ -8,3 +8,14 @@
     .wrapper
       %button.btn.btn-info
         = link_to 'New', new_school_path
+
+      - if @school.present?
+        = form_with model: @school, url: schools_path, local: true do |f|
+          - @school.each do |s|
+            %div.syllabus
+              %p= s.school_class
+              %p= s.name
+              %p= s.evaluation
+              %p= s.test
+              %p Read more...
+      - else
