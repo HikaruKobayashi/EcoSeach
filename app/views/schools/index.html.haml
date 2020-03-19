@@ -3,19 +3,41 @@
 -# ----------------------------
 = render 'layouts/header'
 
+-# ----------------------------
+-# side bar
+-# ----------------------------
+= render 'layouts/side_bar'
+
 .container
   .row
-    .wrapper
-      %button.btn.btn-info
-        = link_to 'New', new_school_path
+    .wrapper.col-12
+      .look_at_syllabus.col-12   
+        -# 検索フォームを作成する。
+        %div.search
+          = form_tag schools_path, :method => 'get' do
+            = text_field_tag :search, params[:search]
+            = submit_tag 'search', :name => nil
 
-      - if @school.present?
-        = form_with model: @school, url: schools_path, local: true do |f|
-          - @school.each do |s|
-            %div.syllabus
-              %p= s.school_class
-              %p= s.name
-              %p= s.evaluation
-              %p= s.test
-              %p Read more...
-      - else
+        .col-12.btn.syllabus-area
+          - if @school.present?
+            = form_with model: @school, url: schools_path, local: true do |f|
+              - @school.each do |s|
+                %div.syllabus.col-5
+                  .form-group
+                    %i.fa.fa-home.menu-school
+                    = f.label :school_class, '授業名', class: 'title'
+                    %p= s.school_class
+                  .form-group
+                    %i.fa.fa-chalkboard-teacher
+                    = f.label :name, '先生', class: 'title'
+                    %p= s.name
+                  .form-group
+                    %i.fa.fa-heart
+                    = f.label :evaluation, '授業に対する評価', class: 'title'
+                    %p= s.evaluation
+                  .form-group
+                    %i.fa.fa-file-alt
+                    = f.label :test, 'テスト形式', class: 'title'
+                    %p= s.test
+                  %p= link_to 'Read more...', s, id: 'detail-' + s.id.to_s , class: 'link-style'
+          - else
