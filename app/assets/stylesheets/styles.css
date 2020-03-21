@@ -1,7 +1,8 @@
 /* Header */
 .header {
-  color: rgb(255, 255, 255);
-  background: linear-gradient(-135deg, rgb(255,153,153), rgb(153, 65, 216));
+  /* color: rgb(255, 255, 255); */
+  /* background: linear-gradient(-135deg, rgb(255,153,153), rgb(153, 65, 216)); */
+  background: rgb(255, 255, 255);
   font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   height: 80px;
 }
@@ -20,6 +21,10 @@
 }
 
 /* Body */
+.body {
+  background-color: rgb(47,46,46);
+}
+
 .link-style, .link-style:hover {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -35,11 +40,10 @@
 }
 
 .syllabus {
-  background-color: rgb(236, 238, 238);
+  background-color: rgb(54,54,54);
   border: 2px solid rgb(100, 100, 100);
   border-radius: 5px;
-  float: left;
-  margin-left: 10px;
+  display: inline-block;
   margin-top: 10px;
 }
 
@@ -49,8 +53,15 @@
 
 .syllabus-area {
   margin-top: 100px;
+  text-align: center;
 }
 
 .new-syllabus {
   float: right;
+}
+
+.container {
+  border: 10px solid rgb(100, 100, 100);
+  margin: 50px;
+  text-align: center;
 }
