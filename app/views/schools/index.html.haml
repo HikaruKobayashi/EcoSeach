@@ -8,6 +8,8 @@
 -# ----------------------------
 -# = render 'layouts/side_bar'
 
+%img.ecosearch-img{ :src => "assets/ecosearch.jpg" }
+
 .container
   .row
     .wrapper.col-12
@@ -32,9 +34,9 @@
                     = f.label :name, '先生', class: 'title'
                     %p= s.name
                   .form-group
-                    %i.fa.fa-heart
+                    %i.fa.fa-heart{ style: 'color: rgb(255, 0, 0);' }
                     = f.label :evaluation, '授業に対する評価', class: 'title'
-                    %p= s.evaluation
+                    %p{style: 'color: rgb(255, 255, 0);'}= s.evaluation
                   .form-group
                     %i.fa.fa-file-alt
                     = f.label :test, 'テスト形式', class: 'title'

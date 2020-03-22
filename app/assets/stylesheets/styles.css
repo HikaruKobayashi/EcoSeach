@@ -7,6 +7,12 @@
   height: 80px;
 }
 
+.ecosearch-img {
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+}
+
 /* side bar */
 .side-bar {
   float: left;
@@ -36,13 +42,16 @@
 }
 
 .look_at_syllabus{
+  width: 100%;
+  height: 80vh;
   float: right;
+  overflow: scroll;
 }
 
 .syllabus {
   background-color: rgb(54,54,54);
   border: 2px solid rgb(100, 100, 100);
-  border-radius: 5px;
+  color: rgb(255, 255, 255);
   display: inline-block;
   margin-top: 10px;
 }
@@ -61,7 +70,7 @@
 }
 
 .container {
-  border: 10px solid rgb(100, 100, 100);
+  border: 15px solid rgb(100, 100, 100);
   margin: 50px;
   text-align: center;
 }
