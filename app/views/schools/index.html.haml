@@ -3,12 +3,13 @@
 -# ----------------------------
 = render 'layouts/header'
 
--# ----------------------------
--# side bar
--# ----------------------------
--# = render 'layouts/side_bar'
-
-%img.ecosearch-img{ :src => "assets/ecosearch.jpg" }
+.slide-show
+  %div
+    %img.ecosearch-img{ :src => "assets/ecosearch.jpg" }
+  %div
+    %img.ecosearch-img{ :src => "assets/city.jpg" }
+  %div
+    %img.ecosearch-img{ :src => "assets/building.jpg" }
 
 .container
   .row
@@ -43,3 +44,18 @@
                     %p= s.test
                   %p= link_to 'Read more...', s, id: 'detail-' + s.id.to_s , class: 'link-style'
           - else
+
+-# ----------------------------
+-# footer
+-# ----------------------------
+= render 'layouts/footer'
+
+:javascript
+  $(function() {
+    $('.slide-show').slick({
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 800
+    });
+  });

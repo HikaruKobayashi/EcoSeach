@@ -1,0 +1,39 @@
+%footer.footer
+  .container
+    .row
+      .col-sm-3
+        %h4.title Hikaru
+      .col-sm-3
+        %h4.title Our Blog
+        %span.acount-icon
+          %a{:href => "#"}
+            %i.fa.fa-heart{"aria-hidden" => "true"}
+            Home
+          %a{:href => "#"}
+            %i.fa.fa-cart-plus{"aria-hidden" => "true"}
+            Programming
+          %a{:href => "#"}
+            %i.fa.fa-user{"aria-hidden" => "true"}
+            English
+          %a{:href => "#"}
+            %i.fa.fa-globe{"aria-hidden" => "true"}
+            Ranking
+      .col-sm-3
+        %h4.title Category
+        .category
+          %a{:href => "#"} Men
+          %a{:href => "#"} Women
+          %a{:href => "#"} Boy
+          %a{:href => "#"} Girl
+          %a{:href => "#"} English
+          %a{:href => "#"} Programming
+          %a{:href => "#"} Spanish
+          %a{:href => "#"} Russian
+          %a{:href => "#"} IT
+      - if current_user
+        %li.nav-item{ style: 'list-style: none;' }
+          %button.btn.btn-warning{type: 'button', style: 'margin: 5px;' }
+            = link_to 'ログアウト', logout_path, method: :delete, class: 'log-in-btn'
+
+    %hr/
+    .row.text-center © 2020. Made by Hikaru.
