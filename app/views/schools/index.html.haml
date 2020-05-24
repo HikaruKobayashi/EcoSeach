@@ -3,24 +3,16 @@
 -# ----------------------------
 = render 'layouts/header'
 
-.slide-show
-  %div
-    %img.ecosearch-img{ :src => "assets/ecosearch.jpg" }
-  %div
-    %img.ecosearch-img{ :src => "assets/city.jpg" }
-  %div
-    %img.ecosearch-img{ :src => "assets/building.jpg" }
-
-.container
-  .row
+.row
+  -# 3カラムレイアウト
+  .col-2
+    -# ----------------------------
+    -# left sidebar
+    -# ----------------------------
+    = render 'layouts/left-slide-bar'
+  .col-8
     .wrapper.col-12
       .look_at_syllabus.col-12   
-        -# 検索フォームを作成する。
-        %div.search
-          = form_tag schools_path, :method => 'get' do
-            = text_field_tag :search, params[:search]
-            = submit_tag 'search', :name => nil
-
         .col-12.btn.syllabus-area
           - if @school.present?
             = form_with model: @school, url: schools_path, local: true do |f|
@@ -44,18 +36,8 @@
                     %p= s.test
                   %p= link_to 'Read more...', s, id: 'detail-' + s.id.to_s , class: 'link-style'
           - else
-
--# ----------------------------
--# footer
--# ----------------------------
-= render 'layouts/footer'
-
-:javascript
-  $(function() {
-    $('.slide-show').slick({
-      dots: true,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      speed: 800
-    });
-  });
+  .col-2
+    -# ----------------------------
+    -# right sidebar
+    -# ----------------------------
+    = render 'layouts/right-slide-bar'
