@@ -1,43 +1,35 @@
+* {
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
 /* Header */
 .header {
   background: rgb(255, 255, 255);
-  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   height: 80px;
 }
 
 /* side bar */
-.side-bar {
-  float: left;
+.left-slide-bar {
+  border-right: 2px solid rgb(0, 0, 0);
 }
-
-.side-btn {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: rgb(255, 153, 153);
-  margin: 20px 0 0 20px;
+.right-slide-bar {
+  border-left: 2px solid rgb(0, 0, 0);
 }
 
 /* Body */
 .link-style, .link-style:hover {
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-}
-
-.btn-eco-search {
-  background-color: rgb(255,153,153);
 }
 
 .look_at_syllabus{
   width: 100%;
   height: 80vh;
-  float: right;
-  overflow: scroll;
 }
 
 .syllabus {
-  display: inline-block;
-  margin-top: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  float: left;
 }
 
 .title {
@@ -47,8 +39,4 @@
 .syllabus-area {
   margin-top: 100px;
   text-align: center;
-}
-
-.new-syllabus {
-  float: right;
 }

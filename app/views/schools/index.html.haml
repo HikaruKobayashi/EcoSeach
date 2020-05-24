@@ -17,7 +17,7 @@
           - if @school.present?
             = form_with model: @school, url: schools_path, local: true do |f|
               - @school.each do |s|
-                %div.syllabus.col-5
+                .syllabus.col-5
                   .form-group
                     %i.fa.fa-home.menu-school
                     = f.label :school_class, '授業名', class: 'title'
@@ -34,8 +34,9 @@
                     %i.fa.fa-file-alt
                     = f.label :test, 'テスト形式', class: 'title'
                     %p= s.test
-                  %p= link_to 'Read more...', s, id: 'detail-' + s.id.to_s , class: 'link-style'
+                  %p= link_to 'Read more...', s, id: 'detail-' + s.id.to_s
           - else
+            %h2 登録されている情報はありません。
   .col-2
     -# ----------------------------
     -# right sidebar
