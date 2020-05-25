@@ -1,13 +1,22 @@
-.left-slide-bar
-  %button.btn.btn-warning
-    %i.fa.fa-home
-    = link_to 'Top', root_path, class: 'link-style'
-  %button.btn.btn-primary
-    %i.fa.fa-home
-    = link_to 'Eco Link', new_school_path, class: 'link-style'
-  %button.btn.btn-primary
-    %i.fa.fa-home
-    = link_to 'Home Page', new_school_path, class: 'link-style'
-  %button.btn.btn-primary
-    %i.fa.fa-home
-    = link_to 'Tweet', new_school_path, class: 'link-style'
+%nav.left-slide-bar.navbar-fixed-left.d-none.d-md-block.bg-light{ style: 'margin: 10px;' }
+  .sidebar-stickey
+    %ul.nav.flex-colum.nav.nav-sidebar
+      %li.nav-item
+        %button{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
+          %i.fa.fa-home{ style: 'margin: 10px;' }
+          = link_to 'Top', root_path, class: 'link-style'
+    %ul.nav.flex-colum.nav.nav-sidebar
+      %li.nav-item
+        %button{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
+          %i.fa.fa-school{ style: 'margin: 10px;' }
+          = link_to 'Eco Link', new_school_path, class: 'link-style'
+    %ul.nav.flex-colum.nav.nav-sidebar
+      %li.nav-item
+        %button{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
+          %i.fa.fa-solar-panel{ style: 'margin: 10px;' }
+          = link_to 'Home Page', new_school_path, class: 'link-style'
+    %ul.nav.flex-colum.nav.nav-sidebar
+      %li.nav-item
+        %button{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
+          %i.fa.fa-pen-alt{ style: 'margin: 10px;' }
+          = link_to 'Tweet', new_school_path, class: 'link-style'
