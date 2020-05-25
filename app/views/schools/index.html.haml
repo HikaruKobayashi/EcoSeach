@@ -5,19 +5,19 @@
 
 .row
   -# 3カラムレイアウト
-  .col-2
+  .col-3
     -# ----------------------------
     -# left sidebar
     -# ----------------------------
     = render 'layouts/left-slide-bar'
-  .col-8
+  .col-6
     .wrapper.col-12
-      .look_at_syllabus.col-12   
+      .look_at_syllabus
         .col-12.btn.syllabus-area
           - if @school.present?
             = form_with model: @school, url: schools_path, local: true do |f|
               - @school.each do |s|
-                .syllabus.col-5
+                .syllabus.col-12
                   .form-group
                     %i.fa.fa-home.menu-school
                     = f.label :school_class, '授業名', class: 'title'
@@ -37,7 +37,7 @@
                   %p= link_to 'Read more...', s, id: 'detail-' + s.id.to_s
           - else
             %h2 登録されている情報はありません。
-  .col-2
+  .col-3
     -# ----------------------------
     -# right sidebar
     -# ----------------------------

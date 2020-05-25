@@ -3,8 +3,14 @@
 -# ----------------------------
 = render 'layouts/header'
 
-.container
-  .row
+.row
+  -# 3カラムレイアウト
+  .col-2
+    -# ----------------------------
+    -# left sidebar
+    -# ----------------------------
+    = render 'layouts/left-slide-bar'
+  .col-8
     .wrapper
       = form_with model: @school, url: schools_path	, local: true do |f|
         .form-group
@@ -27,3 +33,8 @@
         = f.submit '登録', class: 'btn btn-warning'
         %button.btn.btn-danger
           = link_to 'キャンセル', schools_path, class: 'link-style'
+  .col-2
+    -# ----------------------------
+    -# right sidebar
+    -# ----------------------------
+    = render 'layouts/right-slide-bar'
