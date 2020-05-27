@@ -2,21 +2,26 @@
   .sidebar-stickey
     %ul.nav.flex-colum.nav.nav-sidebar
       %li.nav-item
-        %button{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
+        %button.slide-bar-menu{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
           %i.fa.fa-home{ style: 'margin: 10px;' }
-          = link_to 'Top', root_path, class: 'link-style'
+          = link_to 'Top', root_path, class: 'slide-link-style'
     %ul.nav.flex-colum.nav.nav-sidebar
       %li.nav-item
-        %button{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
+        %button.slide-bar-menu{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
           %i.fa.fa-school{ style: 'margin: 10px;' }
-          = link_to 'Eco Link', new_school_path, class: 'link-style'
+          = link_to 'Eco Link', 'https://www.wcl.eco.nihon-u.ac.jp/Portal/login/login.php?next=', class: 'slide-link-style', :target=>["_blank"]
     %ul.nav.flex-colum.nav.nav-sidebar
       %li.nav-item
-        %button{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
+        %button.slide-bar-menu{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
           %i.fa.fa-solar-panel{ style: 'margin: 10px;' }
-          = link_to 'Home Page', new_school_path, class: 'link-style'
+          = link_to 'Home Page', 'https://www.eco.nihon-u.ac.jp/', class: 'slide-link-style', :target=>["_blank"]
     %ul.nav.flex-colum.nav.nav-sidebar
       %li.nav-item
-        %button{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
+        %button.slide-bar-menu{ style: 'padding: 30px; margin: 0  0 20px 100px;' }
           %i.fa.fa-pen-alt{ style: 'margin: 10px;' }
-          = link_to 'Tweet', new_school_path, class: 'link-style'
+          = link_to 'Tweet', new_school_path, class: 'slide-link-style'
+    %ul.nav.flex-colum.nav.nav-sidebar
+      %li.nav-item
+        %button.slide-bar-menu{ style: 'padding: 30px; margin: 200px  0 20px 100px;' }
+          %i.fa.fa-sign-in-alt{ style: 'margin: 10px;' }
+          = link_to 'LogOut', logout_path, class: 'slide-link-style'

@@ -11,15 +11,39 @@
 
 /* side bar */
 .left-slide-bar {
-  border-right: 2px solid rgb(47,59,68);
+  /* border-right: 2px solid rgb(47,59,68); */
   position: fixed;
 }
 .right-slide-bar {
-  border-left: 2px solid rgb(47,59,68);
+  /* border-left: 2px solid rgb(47,59,68); */
   position: fixed;
 }
 
+.slide-bar-menu {
+  font-size: 19px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+}
+.slide-bar-menu:hover {
+  background-color: rgb(25,39,52);
+}
+
 /* Body */
+.main {
+  border-right: 2px solid rgb(47,59,68);
+  border-left: 2px solid rgb(47,59,68);
+  overflow: scroll;
+
+}
+.slide-link-style {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.slide-link-style:hover {
+  color: rgb(29,161,242);
+  text-decoration: none;
+}
 .link-style, .link-style:hover {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -38,9 +62,4 @@
 
 .title {
   font-weight: bold;
-}
-
-.syllabus-area {
-  margin-top: 100px;
-  text-align: center;
 }
