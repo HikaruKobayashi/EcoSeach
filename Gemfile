@@ -38,6 +38,8 @@ gem "jquery-rails"
 gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
+gem "activestorage", ">= 5.2.4.3"
+
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
