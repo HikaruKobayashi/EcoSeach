@@ -5,15 +5,15 @@
 
 .row
   -# 3カラムレイアウト
-  .col-3
+  .col-3.col-xl-3.d-none.d-sm-block
     -# ----------------------------
     -# left sidebar
     -# ----------------------------
     = render 'layouts/left-slide-bar'
-  .col-6.main
-    .wrapper.col-12
+  .col-12.col-xl-6.d-block.main.px-0
+    .wrapper.col-12.px-0
       .look_at_syllabus
-        .col-12.btn.syllabus-area
+        .col-12.btn.syllabus-area.px-0
           - if @school.present?
             = form_with model: @school, url: schools_path, local: true do |f|
               - @school.each do |s|
@@ -37,7 +37,7 @@
                   %p= link_to 'Read more...', s, id: 'detail-' + s.id.to_s
           - else
             %h2 登録されている情報はありません。
-  .col-3
+  .col-3.col-xl-3.d-none.d-sm-block
     -# ----------------------------
     -# right sidebar
     -# ----------------------------

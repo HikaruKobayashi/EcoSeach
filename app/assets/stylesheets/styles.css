@@ -4,6 +4,12 @@
   color: rgb(255, 255, 255);
 }
 
+/* Log in */
+.login-label {
+  font-size: 19px;
+  font-weight: bold;
+}
+
 /* Header */
 .header {
   height: 80px;
@@ -11,11 +17,9 @@
 
 /* side bar */
 .left-slide-bar {
-  /* border-right: 2px solid rgb(47,59,68); */
   position: fixed;
 }
 .right-slide-bar {
-  /* border-left: 2px solid rgb(47,59,68); */
   position: fixed;
 }
 
@@ -36,6 +40,9 @@
   overflow: scroll;
 
 }
+.center {
+  padding: 0 !important;
+}
 .slide-link-style {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -55,9 +62,9 @@
 }
 
 .syllabus {
-  border: 1px solid rgb(0, 0, 0);
+  border-top: 1px solid rgb(47,59,68);
+  border-bottom: 1px solid rgb(47,59,68);
   float: left;
-  margin-bottom: 10px;
 }
 
 .title {
