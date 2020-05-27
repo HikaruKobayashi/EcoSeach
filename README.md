@@ -1,24 +1,7 @@
-# README
+# EcoSeach
+日本大学経済学部のシラバス検索アプリケーションを作成する。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発に使用した技術
+- Docker
+- Heroku
+- Ruby on Rails
