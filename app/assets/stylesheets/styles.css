@@ -26,6 +26,35 @@
   position: fixed;
 }
 
+.slide-bar-tweet {
+  font-size: 19px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(29,161,242);
+  text-decoration: none;
+}
+
+.slide-link-style {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.slide-link-style:hover {
+  color: rgb(29,161,242);
+  text-decoration: none;
+}
+
+.slide-link-style-tweet {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.slide-link-style-tweet:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
 .slide-bar-menu {
   font-size: 19px;
   font-weight: bold;
@@ -46,14 +75,7 @@
 .center {
   padding: 0 !important;
 }
-.slide-link-style {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-.slide-link-style:hover {
-  color: rgb(29,161,242);
-  text-decoration: none;
-}
+
 .link-style, .link-style:hover {
   color: rgb(255, 255, 255);
   text-decoration: none;

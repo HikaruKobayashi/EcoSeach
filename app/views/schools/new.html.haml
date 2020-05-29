@@ -5,13 +5,13 @@
 
 .row
   -# 3カラムレイアウト
-  .col-2
+  .col-3.col-xl-3.d-none.d-sm-block
     -# ----------------------------
     -# left sidebar
     -# ----------------------------
     = render 'layouts/left-slide-bar'
-  .col-8
-    .wrapper
+  .col-12.col-xl-6.d-block.main.px-0
+    .wrapper.col-12.px-0
       = form_with model: @school, url: schools_path	, local: true do |f|
         .form-group
           = f.label :school_class, '授業名'
@@ -33,7 +33,7 @@
         = f.submit '登録', class: 'btn btn-warning'
         %button.btn.btn-danger
           = link_to 'キャンセル', schools_path, class: 'link-style'
-  .col-2
+  .col-3.col-xl-3.d-none.d-sm-block
     -# ----------------------------
     -# right sidebar
     -# ----------------------------
