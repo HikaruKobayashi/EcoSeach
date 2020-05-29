@@ -5,6 +5,9 @@
 }
 
 /* Log in */
+.login {
+  margin: auto;
+}
 .login-label {
   font-size: 19px;
   font-weight: bold;
