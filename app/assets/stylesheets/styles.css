@@ -66,6 +66,12 @@
 }
 
 /* Body */
+.profile-image {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+}
+
 .main {
   border-right: 2px solid rgb(47,59,68);
   border-left: 2px solid rgb(47,59,68);

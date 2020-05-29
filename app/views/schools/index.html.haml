@@ -14,6 +14,14 @@
     .wrapper.col-12.px-0
       .look_at_syllabus
         .col-12.btn.syllabus-area.px-0
+          .profile-area.col-12.px-0
+            %image.col-12.px-0{ :src => 'assets/ecosearch.jpg', style: 'height: 60vh;' }
+            .profile-image
+              %image{ :src => 'assets/city.jpg', style: 'width: 135px; height: 135px; border-radius: 50%;' }
+            %p This site is a syllabus search site of Nihon University College of Economics.
+            %i.fas.fa-calendar-alt
+            %p Today
+            %p 2016/07/19
           - if @school.present?
             = form_with model: @school, url: schools_path, local: true do |f|
               - @school.each do |s|
