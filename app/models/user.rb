@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :schools, dependent: :destroy
+  has_many :school, dependent: :destroy
+  has_many :comments
 
   has_secure_password
 
