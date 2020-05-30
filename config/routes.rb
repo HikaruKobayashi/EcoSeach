@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: "sessions#new"
-  resources :schools
+  resources :schools do
+    resources :comments, only: [:create]
+  end
 
   get '/login' => 'sessions#new'
   post '/login'=> 'sessions#create'
