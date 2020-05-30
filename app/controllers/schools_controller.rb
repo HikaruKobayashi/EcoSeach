@@ -6,7 +6,9 @@ class SchoolsController < ApplicationController
   end
 
   def show
-    @school = current_user.schools.find(params[:id])
+    @school = School.find(params[:id])
+    @comments = @school.comments
+    @comment = @school.comments.build
   end
 
   def new
