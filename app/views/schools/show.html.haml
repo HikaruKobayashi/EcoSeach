@@ -29,6 +29,7 @@
 
           %div{ style: 'border-bottom: 1px solid rgb(47, 59, 68);' }
             %h3 コメント
+            %button.btn.btn-warning{ 'data-toggle' => 'modal', 'data-target' => '#post' } tweet
           -# コメント一覧
           - @comments.each do |c|
             .comment-list
@@ -40,13 +41,17 @@
               -# コメント内容
               = c.content
 
-          -# コメント作成機能 ログインユーザーだけがコメントできる
+          -# コメント作成機能 ログインユーザーだけがコメントできる モーダルウィンドウで非同期投稿している
           - if current_user
-            = form_with(model: [@school, @comment], local: true) do |f|
-              = f.text_area :content, class: 'form-control', rows: 5
-              = button_tag type: 'submit', class: 'btn btn-primary float-right mt-1' do
-                %i.far.fa-comments{ style: 'background-color: rgb(0,123,255);' }
-                  コメントする
+            #post.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+              .modal-dialog{:role => "document"}
+                .modal-content
+                  = form_with(model: [@school, @comment], local: true) do |f|
+                    = f.text_area :content, class: 'form-control', rows: 5
+                    = button_tag type: 'submit', class: 'btn btn-primary float-right mt-1' do
+                      %i.far.fa-comments{ style: 'background-color: rgb(0,123,255);' }
+                        コメントする
+                      %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} 閉じる
           - else
         
   .col-3.col-xl-3.d-none.d-sm-block
