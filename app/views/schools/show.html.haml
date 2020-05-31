@@ -18,23 +18,23 @@
           %h2= @school.school_class
           %h2= @school.content
           %h2= @school.evaluation
-        %p コメント
-        - @comments.each do |c|
-          %div
-            - unless c.user.blank?
-              %a{ :href => "#{user_path(c.user_id)}" }
-            = c.user.name unless c.user.blank?
-            %br/
-            = c.content
+          %p コメント
+          - @comments.each do |c|
+            %div
+              - unless c.user.blank?
+                %a{ :href => "#{user_path(c.user_id)}" }
+              = c.user.name unless c.user.blank?
+              %br/
+              = c.content
 
-        -# コメント作成機能 ログインユーザーだけがコメントできる
-        - if current_user
-          = form_with(model: [@school, @comment], local: true) do |f|
-            = f.text_area :content, class: 'form-control', rows: 5
-            = button_tag type: 'submit', class: 'btn btn-primary float-right mt-1' do
-              %i.far.fa-comments{ style: 'background-color: rgb(0,123,255);' }
-                コメントする
-        - else
+          -# コメント作成機能 ログインユーザーだけがコメントできる
+          - if current_user
+            = form_with(model: [@school, @comment], local: true) do |f|
+              = f.text_area :content, class: 'form-control', rows: 5
+              = button_tag type: 'submit', class: 'btn btn-primary float-right mt-1' do
+                %i.far.fa-comments{ style: 'background-color: rgb(0,123,255);' }
+                  コメントする
+          - else
         
   .col-3.col-xl-3.d-none.d-sm-block
     -# ----------------------------
