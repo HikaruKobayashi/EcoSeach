@@ -18,13 +18,17 @@
           %h2= @school.school_class
           %h2= @school.content
           %h2= @school.evaluation
+
           %p コメント
+          -# コメント一覧
           - @comments.each do |c|
             %div
+              -# user名
               - unless c.user.blank?
-                %a{ :href => "#{user_path(c.user_id)}" }
+                %a{ :href => "#{users_path(c.user_id)}" }
               = c.user.name unless c.user.blank?
               %br/
+              -# コメント内容
               = c.content
 
           -# コメント作成機能 ログインユーザーだけがコメントできる
