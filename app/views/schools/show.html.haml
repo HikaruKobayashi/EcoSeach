@@ -21,9 +21,9 @@
         %p コメント
         - @comments.each do |c|
           %div
-            -# - unless.c.user.blank?
-            -#   %a{ :href => "#{user_path(c.user_id)}" }
-            -# = c.user.name unless.c.user.blank?
+            - unless c.user.blank?
+              %a{ :href => "#{user_path(c.user_id)}" }
+            = c.user.name unless c.user.blank?
             %br/
             = c.content
 
