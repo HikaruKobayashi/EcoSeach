@@ -13,16 +13,25 @@
   .col-12.col-xl-6.d-block.main.px-0
     .wrapper.col-12.px-0
       .look_at_syllabus
-        .col-12.btn.syllabus-area.px-0
-          %h2= @school.name
-          %h2= @school.school_class
-          %h2= @school.content
-          %h2= @school.evaluation
+        .col-12.btn.px-0
+          .syllabus-detail
+            %i.fa.fa-home.menu-school
+            %h3 授業名
+            %p= @school.school_class
+            %i.fa.fa-chalkboard-teacher
+            %h3 先生
+            %p= @school.name
+            %i.fa.fa-heart{ style: 'color: rgb(255, 0, 0);' }
+            %h3 授業に対する評価
+            %p= @school.evaluation
+            %h3 授業内容と感想
+            %p= @school.content
 
-          %p コメント
+          %div{ style: 'border-bottom: 1px solid rgb(47, 59, 68);' }
+            %h3 コメント
           -# コメント一覧
           - @comments.each do |c|
-            %div
+            .comment-list
               -# user名
               - unless c.user.blank?
                 %a{ :href => "#{users_path(c.user_id)}" }

@@ -101,3 +101,13 @@
 .title {
   font-weight: bold;
 }
+
+.syllabus-detail {
+  border-top: 1px solid rgb(47, 59, 68);
+  border-bottom: 1px solid rgb(47, 59, 68);
+}
+
+/* コメント欄のスタイリング */
+.comment-list {
+  border-bottom: 1px solid rgb(47, 59, 68);
+}
